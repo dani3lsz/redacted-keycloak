@@ -1,0 +1,156 @@
+:root {
+  --hue: 260;
+  --action1: hsl(var(--hue), 70%, 65%);
+  --action1h: hsl(var(--hue), 75%, 60%);
+  --action105: hsla(var(--hue), 70%, 65%, 0.5);
+  --grey02: hsla(0, 0%, 50%, 0.2);
+  --grey03: hsla(0, 0%, 50%, 0.3);
+  --color-shadow: 0 0 0 1px var(--action1);
+  --hover-shadow: 0 0 0 1px var(--action105);
+  --box-shadow: 0 0 0 1px var(--grey02);
+}
+
+button,
+select {
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-transform: none;
+}
+
+a, a:hover, a:active {
+  color: #333 !important;
+  text-decoration: none;
+}
+
+#kc-header-wrapper {
+  padding: 0;
+}
+
+.login-pf {
+  background: #fafafa;
+}
+
+.login-pf body {
+  background: none;
+}
+
+div.kc-logo-text {
+  background-image: url(../img/redacted-logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.card-pf {
+  box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  border: none;
+  border-radius: 20px;
+}
+
+@media (max-width: 767px) {
+  .card-pf, .login-pf-page .card-pf {
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  }
+}
+
+.re_header {
+  padding: 30px;
+}
+
+.re_input,
+.re_textarea {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 15px;
+  box-shadow: var(--box-shadow);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+  transition: box-shadow 0.1s;
+}
+
+.re_input:hover,
+.re_input:active,
+.re_textarea:hover,
+.re_textarea:active {
+  box-shadow: var(--hover-shadow);
+}
+
+.re_input:focus,
+.re_textarea:focus {
+  box-shadow: var(--color-shadow);
+}
+
+.re_btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  padding: 2px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--grey02);
+  color: #333;
+  text-align: center;
+  transition: background-color .2s;
+}
+
+.re_btn + .re_btn {
+  margin-top: 10px;
+}
+
+.kc-social-grid .re_btn {
+  margin-top: 5px;
+}
+
+.re_btn:hover, .re_btn:active {
+  background-color: var(--grey03);
+}
+
+.re_btn-w {
+  display: flex;
+  width: 100%;
+}
+
+.re_btn-m {
+  padding: 5px 10px;
+  font-size: 125%;
+}
+
+.re_btn-l {
+  padding: 5px 10px;
+  font-size: 150%;
+}
+
+.re_btn-action {
+  background-color: var(--action1);
+  color: #fff;
+}
+
+.re_btn-action:hover, .re_btn-action:active {
+  background-color: var(--action1h);
+}
+
+.re_btn-social {
+  justify-content: space-between;
+}
+
+.re_btn-social::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.re_btn_icon {
+  font-size: 24px;
+}
